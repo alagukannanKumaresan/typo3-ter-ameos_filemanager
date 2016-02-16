@@ -3,14 +3,14 @@
     <f:for each="{columns}" as="column">
         <f:if condition="{0:column} == {0:'icon'}">
                 <td class="icone">
-                    <f:link.action action="index" addQueryString="0" additionalParams="{tx_ameos_filemanager: '{file: fi.uid}'}" >
+                    <f:link.action action="index" addQueryString="0" additionalParams="{tx_ameos_filemanager: '{file: fi.uid}'}" target="_blank">
                         <custom:icon type="{fi.originalResource.extension}" iconFolder="{iconFolder}"/>
                     </f:link.action> 
                 </td>
         </f:if>
         <f:if condition="{0:column} == {0:'title'}">
                 <td>
-                    <f:link.action action="index" addQueryString="0" additionalParams="{tx_ameos_filemanager: '{file: fi.uid}'}" >
+                    <f:link.action action="index" addQueryString="0" additionalParams="{tx_ameos_filemanager: '{file: fi.uid}'}" target="_blank">
                         {fi.title}
                     </f:link.action> 
                 </td>
@@ -50,12 +50,12 @@
             <td>
                 <f:for each="{actionDetail}" as="action">
                     <f:if condition="{0:action} == {0:'detail'}">
-                        <f:link.action action="index" addQueryString="0" additionalParams="{tx_ameos_filemanager: '{file: fi.uid}'}" >
+                        <f:link.action action="index" addQueryString="0" additionalParams="{tx_ameos_filemanager: '{file: fi.uid}'}" target="_blank">
                             <f:translate key="download"/>
                         </f:link.action><br/>
                     </f:if>
                     <f:if condition="{0:action} == {0:'download'}">
-                        <f:link.action action="detail" addQueryString="0" additionalParams="{tx_ameos_filemanager: '{file: fi.uid}'}" >
+                        <f:link.action action="detail" addQueryString="0" additionalParams="{tx_ameos_filemanager: '{file: fi.uid}'}" target="_blank">
                             <f:translate key="detail"/>
                         </f:link.action><br/>
                     </f:if>
